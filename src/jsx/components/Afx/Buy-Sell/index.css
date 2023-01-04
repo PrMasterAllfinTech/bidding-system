@@ -1,0 +1,51 @@
+/*! CSS Used from: Embedded */
+::-webkit-input-placeholder{color:rgb(193, 198, 205);font-style:normal!important;}
+/*! CSS Used from: Embedded */
+.css-vurnku{box-sizing:border-box;margin:0;min-width:0;}
+/*! CSS Used from: Embedded */
+.css-enhan1{box-sizing:border-box;margin:0px;min-width:0px;display:flex;align-items:flex-end;}
+.css-1pqhwvz{box-sizing:border-box;margin:0px;min-width:0px;display:flex;position:static;color:rgb(112, 122, 138);padding:8px;-webkit-box-flex:0;flex-grow:0;-webkit-box-align:center;align-items:center;text-align:center;overflow:hidden;}
+.css-1pqhwvz [data-class="step_marker_row"]::before{content:"";position:absolute;height:4px;top:12px;width:9999px;background-color:inherit;right:100%;margin-right:8px;}
+.css-1pqhwvz [data-class="step_marker_row"]::after{content:"";position:absolute;height:4px;top:12px;width:9999px;background-color:inherit;left:100%;margin-left:8px;}
+.css-1pqhwvz[data-status="process"]{color:rgb(30, 35, 41);}
+.css-1pqhwvz[data-status="process"] [data-class="step_marker_row"]{background-color:rgb(184, 238, 255);}
+
+.css-1pqhwvz[data-status="process"] [data-class="step_marker_number"]{color:rgb(24, 26, 32);}
+.css-1pqhwvz:first-of-type [data-class="step_marker_row"]::before{display:none;}
+.css-1pqhwvz:last-of-type [data-class="step_marker_row"]::after{display:none;}
+.css-1pqhwvz [data-class="step_marker_row"]{position:relative;width:24px;height:24px;line-height:24px;text-align:center;border-radius:100%;margin-top:20px;background-color:rgb(234, 236, 239);user-select:none;}
+.css-yyvsvt{box-sizing:border-box;margin:0px;min-width:0px;display:flex;flex-direction:column;-webkit-box-align:center;align-items:center;}
+.css-vdqias{box-sizing:border-box;margin:0px;min-width:0px;display:none;}
+@media screen and (min-width: 767px){
+    .css-vdqias{display:block;}
+}
+.css-1p4nx4e{box-sizing:border-box;margin:0px;min-width:0px;font-size:16px;}
+.css-13dco2g{box-sizing:border-box;margin:0px;min-width:0px;bottom:20px;height:0px;align-self:flex-end;flex:1 1 0%;position:relative;background-color:rgb(234, 236, 239);}
+.css-13dco2g::after{content:"";position:absolute;top:0px;left:0px;right:0px;height:4px;background-color:inherit;}
+
+
+.css-13dco2g[data-status="process"]::after {background-color:rgb(184, 238, 255);}
+
+
+.css-13dco2g[data-status-line="process"] {
+    background-color: rgb(184, 238, 255);
+}
+
+.css-1pqhwvz [data-class="step_marker_row"]::before {
+    content: "";
+    position: absolute;
+    height: 4px;
+    top: 12px;
+    width: 9999px;
+    background-color: inherit;
+    right: 100%;
+    /* margin-right: 8px; */
+}
+
+.css-1pqhwvz[data-status="finish"] [data-class="step_marker_row"], .css-1pqhwvz[data-status="finish"] [data-class="step_marker_column"] {
+    background-color: rgb(184, 238, 255);
+}
+
+.css-1pqhwvz[data-status="process"] [data-class="step_marker_row"], .css-1pqhwvz[data-status="process"] [data-class="step_marker_column"] {
+    background-color: rgb(184, 238, 255);
+}

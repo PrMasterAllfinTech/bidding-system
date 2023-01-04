@@ -1,0 +1,135 @@
+import React, {Fragment, useState} from "react";
+import {CopyToClipboard} from "react-copy-to-clipboard/lib/Component";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCopy} from "@fortawesome/free-regular-svg-icons";
+
+
+const BuyTradeData = (props) => {
+    //console.dir(props)
+    function parsing(number) {
+        return parseFloat(number).toFixed(2)
+    }
+
+    const [copied, setCopied] = useState(false)
+    const allfinRsv = 'allfin1'
+
+    return(
+        <Fragment>
+
+                    <div className="row justify-content-center">
+                        <div className="col-12 mb-4 fc-BlueSec">
+                            Datos de Pago Bs
+                        </div>
+                    </div>
+                    <div className="d-flex row justify-content-center">
+
+                        <div className="col-2">
+                            <div className="row">
+                                <div className="col-12 mb-2 fc-BlueSec">
+                                    Banco
+                                </div>
+                                <div className="col-12">
+                                    {props.data.order_info?.account_in.bank_info.name}
+                                </div>
+                            </div>
+                        </div>
+                        <div className="col-2">
+                            <div className="row">
+                                <div className="col-12 mb-2 fc-BlueSec ">
+                                    Cuenta
+                                </div>
+                                <div className="col-12 ">
+                                    {props.data.order_info?.account_in.input_fields.cuenta}
+                                    <CopyToClipboard
+                                        text={props.data.order_info?.account_in.input_fields.cuenta}
+                                        onCopy={() => setCopied(true)}><span>
+                                        <FontAwesomeIcon icon={faCopy} className={"ctc ml-1"}/></span>
+                                    </CopyToClipboard>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-2">
+                            <div className="row">
+                                <div className="col-12 mb-2 fc-BlueSec ">
+                                    Documento
+                                </div>
+                                <div className="col-12 ">
+                                    {props.data.order_info?.account_in.input_fields.cedula}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-2">
+                            <div className="row">
+                                <div className="col-12 mb-2 fc-BlueSec">
+                                    Cantidad Bs
+                                </div>
+                                <div className="col-12">
+                                    {parsing(props.data?.amount * props.data?.exchange_rate)} Bs
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-2">
+                            <div className="row">
+                                <div className="col-12 mb-2 fc-BlueSec">
+                                    Referencia
+                                </div>
+                                <div className="col-12">
+                                    <div className="row justify-content-center">
+                                        RSV: {props.data?.rsv_reference}
+                                    </div>
+                                    <div className="row justify-content-center">
+                                        Bs: {props.data?.bc_reference}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className="col-2">
+                            <div className="row">
+                                <div className="col-12 mb-2 fc-BlueSec">
+                                    Estado de Pago
+                                </div>
+                                <div className="col-12">
+
+                                </div>
+                                <div className="col-12">
+                                    {props.data?.deny != 0 && props.data?.bc_status != 2?
+                                        <div>
+                                            Pago rechazado <br/>
+                                            <p className={"fc-Orange"}>
+                                                {props.data?.comments}
+                                            </p>
+
+                                        </div>
+                                        :
+                                    {
+                                        '2': ' Pago Confirmado',
+                                        '1': ' Realizando pagos',
+                                        '0': ' Esperando pagos'
+                                    }[props.data?.bc_status]
+
+                                    }
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                <div className="row justify-content-center mt-5">
+                    <div className="col-12 mb-2 fc-Orange">
+                        Recuerde Enviar el Pago a la brevedad posible
+                    </div>
+                    <div className="trade-date">
+                        Trade Creado:   {props.data.created}
+                    </div>
+                </div>
+
+        </Fragment>
+
+    )
+}
+
+export default BuyTradeData

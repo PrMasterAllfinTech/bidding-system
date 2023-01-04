@@ -1,0 +1,46 @@
+{
+  "data": {
+    "data": [
+      {
+        "id": "01",
+        "name": "usd dollar",
+        "slug": "Usd",
+        "type": "Fiat",
+        "status": "active",
+        "symbol": "$"
+      },
+      {
+        "id": "02",
+        "name": "bolivar",
+        "slug": "Ves",
+        "type": "Fiat",
+        "status": "active",
+        "symbol": "Bs"
+      },
+      {
+        "id": "03",
+        "name": "usdt",
+        "slug": "USDT",
+        "type": "Asset",
+        "status": "active",
+        "symbol": "usdt"
+      },
+      {
+        "id": "04",
+        "name": "usdc",
+        "slug": "Usdc",
+        "type": "Asset",
+        "status": "active",
+        "symbol": "usdc"
+      },
+      {
+        "id": "05",
+        "name": "usdx",
+        "slug": "Usdx",
+        "type": "Asset",
+        "status": "active",
+        "symbol": "usdx"
+      }
+    ]
+  }
+}

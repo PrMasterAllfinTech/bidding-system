@@ -1,0 +1,27 @@
+{
+  "data": {
+    "data": [
+      {
+        "id": "01",
+        "name": "Reinaldo Cardenas",
+        "email": "reinaldo@allfintec.com",
+        "status": "active",
+        "role": "client"
+      },
+      {
+        "id": "02",
+        "name": "Carlos Zuloaga",
+        "email": "carlos@allfintec.com",
+        "status": "pending",
+        "role": "client"
+      },
+      {
+        "id": "02",
+        "name": "John Scull",
+        "email": "john@allfintec.com",
+        "status": "inactive",
+        "role": "client"
+      }
+    ]
+  }
+}

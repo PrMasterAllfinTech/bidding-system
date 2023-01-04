@@ -1,0 +1,55 @@
+{
+  "data": {
+    "data": [
+      {
+        "id": "01",
+        "name": "Zelle",
+        "slug": "zelle",
+        "currency": {
+          "name":"usd dollar",
+          "slug": "usd",
+          "symbol": "$"
+        },
+        "status": "active",
+        "symbol": "Z",
+        "input_fields": [
+          {
+            "name": ""
+          }
+        ]
+      },
+      {
+        "id": "02",
+        "name": "Bolivares",
+        "slug": "Ves",
+        "type": "fiat",
+        "status": "active",
+        "symbol": "Bs"
+      },
+      {
+        "id": "03",
+        "name": "USDT",
+        "slug": "USDT",
+        "type": "asset",
+        "status": "active",
+        "symbol": "usdt"
+      },
+      {
+        "id": "04",
+        "name": "USDC",
+        "slug": "Usdc",
+        "type": "asset",
+        "status": "active",
+        "symbol": "usdc"
+      },
+      {
+        "id": "05",
+        "name": "USDX",
+        "slug": "Usdx",
+        "type": "asset",
+        "status": "active",
+        "symbol": "usdx"
+      }
+    ]
+  }
+}
